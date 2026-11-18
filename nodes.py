@@ -110,7 +110,7 @@ class IDEmbeddingModelLoader:
         device = comfy.model_management.get_torch_device()
 
         # Load arcface model
-        arcface_model = init_recognition_model('arcface', device=device)
+        arcface_model = init_recognition_model('arcface', device=device, model_rootpath=os.path.join(folder_paths.models_dir, "facexlib"))
 
          # Load image proj model
         image_emb_dim = 512
